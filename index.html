@@ -6,56 +6,87 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#0f0f1a;
-  color:#fff;
+  background:#0b0b14;
+  color:#ffffff;
   scroll-behavior:smooth;
 }
 
 header{
-  padding:60px 20px;
+  padding:80px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#9d4edd,#c77dff);
+  background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');
+  background-size:cover;
+  background-position:center;
+  position:relative;
 }
 
-header h1{font-size:42px;margin:0;}
-header p{opacity:0.9;font-size:18px;}
+header::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.6);
+}
+
+header h1, header p{
+  position:relative;
+}
+
+header h1{font-size:48px;margin:0;}
+header p{opacity:0.9;font-size:18px;max-width:700px;margin:auto;}
 
 nav{
   position:sticky;
   top:0;
-  background:#111;
+  background:#0f0f1a;
   display:flex;
   justify-content:center;
   gap:20px;
-  padding:10px;
+  padding:12px;
   z-index:10;
-  flex-wrap:wrap;
+  border-bottom:1px solid #222;
 }
 
 nav a{
-  color:#fff;
+  color:#ffffff;
   text-decoration:none;
   font-size:14px;
   opacity:0.8;
 }
 
 section{
-  padding:60px 20px;
+  padding:70px 20px;
   max-width:1000px;
   margin:auto;
 }
 
-.card{
-  background:#1a1a2e;
-  padding:20px;
-  border-radius:16px;
-  margin-top:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+section:nth-child(even){
+  background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');
+  background-size:cover;
+  background-position:center;
+  position:relative;
 }
 
-h2{color:#c77dff;}
+section:nth-child(even)::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.75);
+}
 
-/* Bottle */
+section > *{
+  position:relative;
+}
+
+.card{
+  background:rgba(20,20,35,0.9);
+  padding:25px;
+  border-radius:16px;
+  margin-top:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+h2{color:#c77dff;font-size:28px;}
+
 .bottle{
   width:120px;
   height:260px;
@@ -72,7 +103,7 @@ h2{color:#c77dff;}
   width:100%;
   height:30%;
   background:linear-gradient(180deg,#9d4edd,#c77dff);
-  transition:height 1s, background 1s;
+  transition:all 1s;
 }
 
 .label{
@@ -86,7 +117,6 @@ h2{color:#c77dff;}
   align-items:center;
   justify-content:center;
   font-weight:bold;
-  transition:1s;
   color:white;
   background:linear-gradient(90deg,#9d4edd,#c77dff);
 }
@@ -98,7 +128,6 @@ button{
   color:white;
   border-radius:10px;
   cursor:pointer;
-  margin:5px;
 }
 
 .team{
@@ -107,19 +136,24 @@ button{
   gap:15px;
 }
 
-.member{background:#111827;padding:15px;border-radius:12px;}
-
-.slider{
-  width:100%;
+.member{
+  background:rgba(17,24,39,0.9);
+  padding:15px;
+  border-radius:12px;
 }
 
-footer{text-align:center;padding:30px;opacity:0.6;}
+footer{
+  text-align:center;
+  padding:40px;
+  opacity:0.6;
+  background:#0f0f1a;
+}
 
 </style></head><body><header>
-  <h1>💧 Aquatherme</h1>
-  <p>Smart packaging naturel pour un futur sans microplastiques</p>
+  <h1>Aquatherme</h1>
+  <p>Une technologie de packaging intelligent basée sur des pigments naturels capables de réagir aux variations thermiques pour améliorer la sécurité alimentaire et réduire les impacts environnementaux des emballages plastiques.</p>
 </header><nav>
-  <a href="#story">Story</a>
+  <a href="#story">Origine</a>
   <a href="#microplastiques">Microplastiques</a>
   <a href="#projet">Projet</a>
   <a href="#science">Science</a>
@@ -127,61 +161,57 @@ footer{text-align:center;padding:30px;opacity:0.6;}
   <a href="#impact">Impact</a>
   <a href="#equipe">Équipe</a>
 </nav><section id="story">
-  <h2>✨ Pourquoi Aquatherme existe</h2>
+  <h2>Origine du projet</h2>
   <div class="card">
-    Le futur de l’emballage ne peut plus être invisible. Chaque bouteille transporte une histoire… et parfois un risque.Aquatherme est née d’une idée simple : rendre visible l’invisible.
-
-Voir la chaleur, prévenir la dégradation, protéger la santé — avant qu’il ne soit trop tard.
+    Aquatherme est née d’une observation simple : les emballages alimentaires actuels ne permettent pas de détecter les variations critiques de température pouvant altérer la qualité des produits.Notre objectif est de développer une solution accessible, biosourcée et intuitive permettant d’informer le consommateur en temps réel.
 
   </div>
 </section><section id="microplastiques">
-  <h2>🌍 Microplastiques</h2>
+  <h2>Contamination par les microplastiques</h2>
   <div class="card">
-    Invisibles mais partout : eau, air, nourriture.
-    Ils s’accumulent dans les organismes vivants et perturbent les écosystèmes.
+    Les microplastiques sont des particules inférieures à 5 mm présentes dans l’eau potable, les aliments et l’air.Leur accumulation dans les organismes vivants soulève des préoccupations majeures en matière de santé publique et d’équilibre écologique.
+
   </div>
 </section><section id="projet">
-  <h2>🚀 Projet Aquatherme</h2>
+  <h2>Présentation du projet</h2>
   <div class="card">
-    5 étudiantes en génie enzymatique.Une bouteille intelligente avec une étiquette bio-sourcée issue de déchets de fruits rouges.
-Objectif : alerter sur la température et réduire les risques de contamination plastique.
+    Le projet Aquatherme repose sur une équipe de cinq étudiantes en génie enzymatique.Nous concevons une étiquette intelligente intégrant des anthocyanines extraites de déchets de fruits rouges, capables de changer de couleur selon la température.
 
   </div>
 </section><section id="science">
-  <h2>🧬 Science derrière le projet</h2>
+  <h2>Fondements scientifiques</h2>
   <div class="card">
-    Les anthocyanines sont des pigments naturels sensibles au pH et à la chaleur.Elles changent de structure moléculaire → changement de couleur visible.
+    Les anthocyanines sont des pigments végétaux sensibles aux variations de température et de pH.Leur structure chimique leur permet de modifier leur absorption lumineuse, entraînant un changement visible de couleur.
 
-Extraction depuis déchets alimentaires = économie circulaire + innovation durable.
+Leur extraction à partir de déchets alimentaires s’inscrit dans une démarche d’économie circulaire.
 
   </div>
 </section><section id="simulation">
-  <h2>🧪 Simulation intelligente</h2>
-  <div class="card"><input type="range" min="0" max="100" value="20" class="slider" id="tempSlider" oninput="updateTemp(this.value)">
-<p>Température simulée</p>
-
-<div class="bottle">
+  <h2>Simulation du comportement thermique</h2>
+  <div class="card"><div class="bottle">
   <div class="liquid" id="liquid"></div>
   <div class="label" id="label">SAFE</div>
 </div>
 
-<p id="status">Température stable</p>
-<p id="co2"></p>
+<button onclick="updateTemp(20)">Température basse</button>
+<button onclick="updateTemp(50)">Température moyenne</button>
+<button onclick="updateTemp(85)">Température élevée</button>
+
+<p id="status">État du produit</p>
 
   </div>
 </section><section id="impact">
-  <h2>🌱 Impact écologique</h2>
+  <h2>Impact environnemental</h2>
   <div class="card">
-    <button onclick="calcCO2()">Calculer CO₂ évité 🌍</button>
-    <p id="co2Result"></p>
-    <br>
-    - Réduction du plastique
-    - Valorisation des déchets
-    - Emballage intelligent
-    - Consommation plus sûre
+    Aquatherme contribue à :
+    <br><br>
+    - La réduction des déchets plastiques
+    - La valorisation des sous-produits agricoles
+    - L’amélioration de la sécurité alimentaire
+    - Le développement d’emballages intelligents durables
   </div>
 </section><section id="equipe">
-  <h2>👩‍🔬 Équipe</h2>
+  <h2>Équipe projet</h2>
   <div class="team">
     <div class="member">Gabes Ikram</div>
     <div class="member">Benhalima Ibtyssem</div>
@@ -190,34 +220,26 @@ Extraction depuis déchets alimentaires = économie circulaire + innovation dura
     <div class="member">Brahimi Manel</div>
   </div>
 </section><footer>
-  Aquatherme © 2026 — Science meets nature
+  Aquatherme - Smart Packaging Innovation
 </footer><script>
 function updateTemp(val){
   let label=document.getElementById("label");
-  let status=document.getElementById("status");
   let liquid=document.getElementById("liquid");
+  let status=document.getElementById("status");
 
   let height = 20 + (val/100)*60;
   liquid.style.height = height + "%";
 
   if(val<40){
     label.innerHTML="SAFE";
-    liquid.style.background="linear-gradient(180deg,#9d4edd,#c77dff)";
-    status.innerHTML="Température stable";
+    status.innerHTML="Produit stable";
   } else if(val<70){
     label.innerHTML="WARNING";
-    liquid.style.background="linear-gradient(180deg,#ffb347,#ffcc70)";
-    status.innerHTML="Chaleur modérée détectée";
+    status.innerHTML="Variation thermique détectée";
   } else {
     label.innerHTML="UNSAFE";
-    liquid.style.background="linear-gradient(180deg,#ff4d6d,#ff758f)";
-    status.innerHTML="Risque de dégradation du produit";
+    status.innerHTML="Risque de dégradation";
   }
-}
-
-function calcCO2(){
-  let saved = Math.floor(Math.random()*80 + 20);
-  document.getElementById("co2Result").innerHTML = "🌍 ~"+saved+"% de CO₂ potentiel évité grâce à Aquatherme";
 }
 </script></body>
 </html>
