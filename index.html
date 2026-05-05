@@ -1,128 +1,223 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Smart Bottle Label</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #fde2e4, #e4c1f9);
-  text-align: center;
-  color: #3c096c;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aquatherme - Smart Packaging</title><style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f0f1a;
+  color:#fff;
+  scroll-behavior:smooth;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
+header{
+  padding:60px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#9d4edd,#c77dff);
 }
 
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+header h1{font-size:42px;margin:0;}
+header p{opacity:0.9;font-size:18px;}
+
+nav{
+  position:sticky;
+  top:0;
+  background:#111;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:10px;
+  z-index:10;
+  flex-wrap:wrap;
 }
 
-.bottle {
-  width: 120px;
-  height: 260px;
-  margin: 20px auto;
-  border-radius: 60px;
-  background: #cdb4db;
-  position: relative;
-  overflow: hidden;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  opacity:0.8;
 }
 
-.label {
-  position: absolute;
-  bottom: 40px;
-  left: 10px;
-  right: 10px;
-  height: 60px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #9d4edd, #c77dff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  transition: background 1s;
+section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
-button {
-  background: #9d4edd;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
+.card{
+  background:#1a1a2e;
+  padding:20px;
+  border-radius:16px;
+  margin-top:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
-.status {
-  margin-top: 10px;
-  font-size: 18px;
+h2{color:#c77dff;}
+
+/* Bottle */
+.bottle{
+  width:120px;
+  height:260px;
+  margin:20px auto;
+  border-radius:60px;
+  background:#cdb4db;
+  position:relative;
+  overflow:hidden;
 }
-</style>
-</head>
 
-<body>
+.liquid{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:30%;
+  background:linear-gradient(180deg,#9d4edd,#c77dff);
+  transition:height 1s, background 1s;
+}
 
-<div class="container">
+.label{
+  position:absolute;
+  bottom:40px;
+  left:10px;
+  right:10px;
+  height:60px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  transition:1s;
+  color:white;
+  background:linear-gradient(90deg,#9d4edd,#c77dff);
+}
 
-  <h1>💧 Smart Bottle Label</h1>
+button{
+  background:#9d4edd;
+  border:none;
+  padding:12px 20px;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  margin:5px;
+}
 
+.team{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.member{background:#111827;padding:15px;border-radius:12px;}
+
+.slider{
+  width:100%;
+}
+
+footer{text-align:center;padding:30px;opacity:0.6;}
+
+</style></head><body><header>
+  <h1>💧 Aquatherme</h1>
+  <p>Smart packaging naturel pour un futur sans microplastiques</p>
+</header><nav>
+  <a href="#story">Story</a>
+  <a href="#microplastiques">Microplastiques</a>
+  <a href="#projet">Projet</a>
+  <a href="#science">Science</a>
+  <a href="#simulation">Simulation</a>
+  <a href="#impact">Impact</a>
+  <a href="#equipe">Équipe</a>
+</nav><section id="story">
+  <h2>✨ Pourquoi Aquatherme existe</h2>
   <div class="card">
-    <div class="bottle">
-      <div id="label" class="label">SAFE</div>
-    </div>
+    Le futur de l’emballage ne peut plus être invisible. Chaque bouteille transporte une histoire… et parfois un risque.Aquatherme est née d’une idée simple : rendre visible l’invisible.
 
-    <button onclick="startHeat()">Simuler chaleur progressive ☀️</button>
-    <div id="status" class="status"></div>
+Voir la chaleur, prévenir la dégradation, protéger la santé — avant qu’il ne soit trop tard.
+
   </div>
+</section><section id="microplastiques">
+  <h2>🌍 Microplastiques</h2>
+  <div class="card">
+    Invisibles mais partout : eau, air, nourriture.
+    Ils s’accumulent dans les organismes vivants et perturbent les écosystèmes.
+  </div>
+</section><section id="projet">
+  <h2>🚀 Projet Aquatherme</h2>
+  <div class="card">
+    5 étudiantes en génie enzymatique.Une bouteille intelligente avec une étiquette bio-sourcée issue de déchets de fruits rouges.
+Objectif : alerter sur la température et réduire les risques de contamination plastique.
 
+  </div>
+</section><section id="science">
+  <h2>🧬 Science derrière le projet</h2>
+  <div class="card">
+    Les anthocyanines sont des pigments naturels sensibles au pH et à la chaleur.Elles changent de structure moléculaire → changement de couleur visible.
+
+Extraction depuis déchets alimentaires = économie circulaire + innovation durable.
+
+  </div>
+</section><section id="simulation">
+  <h2>🧪 Simulation intelligente</h2>
+  <div class="card"><input type="range" min="0" max="100" value="20" class="slider" id="tempSlider" oninput="updateTemp(this.value)">
+<p>Température simulée</p>
+
+<div class="bottle">
+  <div class="liquid" id="liquid"></div>
+  <div class="label" id="label">SAFE</div>
 </div>
 
-<script>
-let step = 0;
-let interval;
+<p id="status">Température stable</p>
+<p id="co2"></p>
 
-function startHeat() {
-  clearInterval(interval);
-  step = 0;
+  </div>
+</section><section id="impact">
+  <h2>🌱 Impact écologique</h2>
+  <div class="card">
+    <button onclick="calcCO2()">Calculer CO₂ évité 🌍</button>
+    <p id="co2Result"></p>
+    <br>
+    - Réduction du plastique
+    - Valorisation des déchets
+    - Emballage intelligent
+    - Consommation plus sûre
+  </div>
+</section><section id="equipe">
+  <h2>👩‍🔬 Équipe</h2>
+  <div class="team">
+    <div class="member">Gabes Ikram</div>
+    <div class="member">Benhalima Ibtyssem</div>
+    <div class="member">Aounallah Rania</div>
+    <div class="member">Bensaid Meriem</div>
+    <div class="member">Brahimi Manel</div>
+  </div>
+</section><footer>
+  Aquatherme © 2026 — Science meets nature
+</footer><script>
+function updateTemp(val){
+  let label=document.getElementById("label");
+  let status=document.getElementById("status");
+  let liquid=document.getElementById("liquid");
 
-  interval = setInterval(() => {
-    step++;
+  let height = 20 + (val/100)*60;
+  liquid.style.height = height + "%";
 
-    let label = document.getElementById("label");
-    let status = document.getElementById("status");
-
-    if (step === 1) {
-      label.style.background = "linear-gradient(90deg, #b07cf7, #d0a2ff)";
-      label.innerHTML = "SAFE";
-      status.innerHTML = "Température normale";
-    }
-
-    if (step === 2) {
-      label.style.background = "linear-gradient(90deg, #ffb347, #ffcc70)";
-      label.innerHTML = "⚠️ WARNING";
-      status.innerHTML = "Chaleur modérée détectée";
-    }
-
-    if (step === 3) {
-      label.style.background = "linear-gradient(90deg, #ff4d6d, #ff758f)";
-      label.innerHTML = "❌ UNSAFE";
-      status.innerHTML = "Exposition critique → risque de dégradation";
-      clearInterval(interval);
-    }
-
-  }, 1500); // vitesse de transition
+  if(val<40){
+    label.innerHTML="SAFE";
+    liquid.style.background="linear-gradient(180deg,#9d4edd,#c77dff)";
+    status.innerHTML="Température stable";
+  } else if(val<70){
+    label.innerHTML="WARNING";
+    liquid.style.background="linear-gradient(180deg,#ffb347,#ffcc70)";
+    status.innerHTML="Chaleur modérée détectée";
+  } else {
+    label.innerHTML="UNSAFE";
+    liquid.style.background="linear-gradient(180deg,#ff4d6d,#ff758f)";
+    status.innerHTML="Risque de dégradation du produit";
+  }
 }
-</script>
 
-</body>
+function calcCO2(){
+  let saved = Math.floor(Math.random()*80 + 20);
+  document.getElementById("co2Result").innerHTML = "🌍 ~"+saved+"% de CO₂ potentiel évité grâce à Aquatherme";
+}
+</script></body>
 </html>
