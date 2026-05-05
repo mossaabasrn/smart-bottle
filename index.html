@@ -2,17 +2,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aquatherme - Smart Packaging</title><style>
+<title>Aquatherme - Smart BioPackaging</title><style>
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#0b0b14;
+  background:#070711;
   color:#ffffff;
-  scroll-behavior:smooth;
+  line-height:1.6;
 }
 
-header{
-  padding:80px 20px;
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
   background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b');
   background-size:cover;
@@ -20,24 +25,32 @@ header{
   position:relative;
 }
 
-header::before{
+.hero::before{
   content:"";
   position:absolute;
   top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.65);
 }
 
-header h1, header p{
+.hero h1, .hero p{
   position:relative;
+  max-width:800px;
 }
 
-header h1{font-size:48px;margin:0;}
-header p{opacity:0.9;font-size:18px;max-width:700px;margin:auto;}
+.hero h1{
+  font-size:54px;
+  margin:0;
+}
+
+.hero p{
+  font-size:18px;
+  opacity:0.9;
+}
 
 nav{
   position:sticky;
   top:0;
-  background:#0f0f1a;
+  background:#0d0d18;
   display:flex;
   justify-content:center;
   gap:20px;
@@ -47,33 +60,33 @@ nav{
 }
 
 nav a{
-  color:#ffffff;
+  color:white;
   text-decoration:none;
   font-size:14px;
   opacity:0.8;
 }
 
 section{
-  padding:70px 20px;
-  max-width:1000px;
+  padding:80px 20px;
+  max-width:1100px;
   margin:auto;
 }
 
-section:nth-child(even){
-  background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');
+.section-bg{
+  background-image:url('https://images.unsplash.com/photo-1470163395405-d2b80e7450ed');
   background-size:cover;
   background-position:center;
   position:relative;
 }
 
-section:nth-child(even)::before{
+.section-bg::before{
   content:"";
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   background:rgba(0,0,0,0.75);
 }
 
-section > *{
+.section-content{
   position:relative;
 }
 
@@ -85,12 +98,16 @@ section > *{
   box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-h2{color:#c77dff;font-size:28px;}
+h2{
+  color:#c77dff;
+  font-size:28px;
+}
 
+/* SIMULATION */
 .bottle{
   width:120px;
   height:260px;
-  margin:20px auto;
+  margin:30px auto;
   border-radius:60px;
   background:#cdb4db;
   position:relative;
@@ -101,7 +118,7 @@ h2{color:#c77dff;font-size:28px;}
   position:absolute;
   bottom:0;
   width:100%;
-  height:30%;
+  height:25%;
   background:linear-gradient(180deg,#9d4edd,#c77dff);
   transition:all 1s;
 }
@@ -117,17 +134,17 @@ h2{color:#c77dff;font-size:28px;}
   align-items:center;
   justify-content:center;
   font-weight:bold;
-  color:white;
   background:linear-gradient(90deg,#9d4edd,#c77dff);
 }
 
 button{
   background:#9d4edd;
   border:none;
-  padding:12px 20px;
+  padding:12px 18px;
   color:white;
   border-radius:10px;
   cursor:pointer;
+  margin:5px;
 }
 
 .team{
@@ -137,7 +154,7 @@ button{
 }
 
 .member{
-  background:rgba(17,24,39,0.9);
+  background:#111827;
   padding:15px;
   border-radius:12px;
 }
@@ -146,72 +163,68 @@ footer{
   text-align:center;
   padding:40px;
   opacity:0.6;
-  background:#0f0f1a;
+  border-top:1px solid #222;
 }
 
-</style></head><body><header>
+</style></head><body><div class="hero">
   <h1>Aquatherme</h1>
-  <p>Une technologie de packaging intelligent basée sur des pigments naturels capables de réagir aux variations thermiques pour améliorer la sécurité alimentaire et réduire les impacts environnementaux des emballages plastiques.</p>
-</header><nav>
-  <a href="#story">Origine</a>
-  <a href="#microplastiques">Microplastiques</a>
-  <a href="#projet">Projet</a>
+  <p>Une technologie de packaging intelligent basée sur des pigments naturels capables de signaler les variations thermiques afin de réduire les risques sanitaires et environnementaux liés aux emballages plastiques.</p>
+</div><nav>
+  <a href="#vision">Vision</a>
+  <a href="#probleme">Problème</a>
+  <a href="#solution">Solution</a>
   <a href="#science">Science</a>
   <a href="#simulation">Simulation</a>
   <a href="#impact">Impact</a>
   <a href="#equipe">Équipe</a>
-</nav><section id="story">
-  <h2>Origine du projet</h2>
+</nav><section id="vision">
+  <h2>Vision</h2>
   <div class="card">
-    Aquatherme est née d’une observation simple : les emballages alimentaires actuels ne permettent pas de détecter les variations critiques de température pouvant altérer la qualité des produits.Notre objectif est de développer une solution accessible, biosourcée et intuitive permettant d’informer le consommateur en temps réel.
+    Transformer l’emballage alimentaire en un système actif, intelligent et biosourcé capable d’informer le consommateur en temps réel sur l’état de conservation du produit.
+  </div>
+</section><section id="probleme" class="section-bg">
+  <div class="section-content">
+  <h2>Problème</h2>
+  <div class="card">
+    Les microplastiques sont aujourd’hui présents dans l’eau, les aliments et l’air. Leur accumulation dans les organismes vivants représente un risque croissant pour la santé humaine et les écosystèmes.Les emballages actuels ne permettent pas de détecter la dégradation thermique des produits.
 
   </div>
-</section><section id="microplastiques">
-  <h2>Contamination par les microplastiques</h2>
+  </div>
+</section><section id="solution">
+  <h2>Solution Aquatherme</h2>
   <div class="card">
-    Les microplastiques sont des particules inférieures à 5 mm présentes dans l’eau potable, les aliments et l’air.Leur accumulation dans les organismes vivants soulève des préoccupations majeures en matière de santé publique et d’équilibre écologique.
+    Nous développons une étiquette intelligente biosourcée à base d’anthocyanines extraites de déchets de fruits rouges. Cette étiquette change de couleur en fonction de la température, permettant une lecture immédiate de la sécurité du produit.
+  </div>
+</section><section id="science" class="section-bg">
+  <div class="section-content">
+  <h2>Science derrière le projet</h2>
+  <div class="card">
+    Les anthocyanines sont des pigments végétaux sensibles à la température et au pH. Leur structure moléculaire se modifie sous l’effet thermique, entraînant un changement d’absorption lumineuse visible.Leur extraction à partir de déchets alimentaires s’inscrit dans une logique d’économie circulaire et de valorisation durable.
 
   </div>
-</section><section id="projet">
-  <h2>Présentation du projet</h2>
-  <div class="card">
-    Le projet Aquatherme repose sur une équipe de cinq étudiantes en génie enzymatique.Nous concevons une étiquette intelligente intégrant des anthocyanines extraites de déchets de fruits rouges, capables de changer de couleur selon la température.
-
-  </div>
-</section><section id="science">
-  <h2>Fondements scientifiques</h2>
-  <div class="card">
-    Les anthocyanines sont des pigments végétaux sensibles aux variations de température et de pH.Leur structure chimique leur permet de modifier leur absorption lumineuse, entraînant un changement visible de couleur.
-
-Leur extraction à partir de déchets alimentaires s’inscrit dans une démarche d’économie circulaire.
-
   </div>
 </section><section id="simulation">
-  <h2>Simulation du comportement thermique</h2>
+  <h2>Simulation</h2>
   <div class="card"><div class="bottle">
   <div class="liquid" id="liquid"></div>
   <div class="label" id="label">SAFE</div>
 </div>
 
-<button onclick="updateTemp(20)">Température basse</button>
-<button onclick="updateTemp(50)">Température moyenne</button>
-<button onclick="updateTemp(85)">Température élevée</button>
+<button onclick="setTemp(20)">Basse température</button>
+<button onclick="setTemp(55)">Température moyenne</button>
+<button onclick="setTemp(85)">Température élevée</button>
 
-<p id="status">État du produit</p>
+<p id="status">État du produit stable</p>
 
   </div>
 </section><section id="impact">
   <h2>Impact environnemental</h2>
   <div class="card">
-    Aquatherme contribue à :
-    <br><br>
-    - La réduction des déchets plastiques
-    - La valorisation des sous-produits agricoles
-    - L’amélioration de la sécurité alimentaire
-    - Le développement d’emballages intelligents durables
+    Aquatherme contribue à la réduction des déchets plastiques, à la valorisation des ressources agricoles et à l’amélioration de la sécurité alimentaire.Cette technologie favorise une transition vers des emballages intelligents et durables.
+
   </div>
 </section><section id="equipe">
-  <h2>Équipe projet</h2>
+  <h2>Équipe</h2>
   <div class="team">
     <div class="member">Gabes Ikram</div>
     <div class="member">Benhalima Ibtyssem</div>
@@ -220,25 +233,25 @@ Leur extraction à partir de déchets alimentaires s’inscrit dans une démarch
     <div class="member">Brahimi Manel</div>
   </div>
 </section><footer>
-  Aquatherme - Smart Packaging Innovation
+  Aquatherme - Smart BioPackaging Innovation
 </footer><script>
-function updateTemp(val){
+function setTemp(val){
   let label=document.getElementById("label");
   let liquid=document.getElementById("liquid");
   let status=document.getElementById("status");
 
-  let height = 20 + (val/100)*60;
-  liquid.style.height = height + "%";
+  let height=20+(val/100)*60;
+  liquid.style.height=height+"%";
 
   if(val<40){
     label.innerHTML="SAFE";
     status.innerHTML="Produit stable";
   } else if(val<70){
     label.innerHTML="WARNING";
-    status.innerHTML="Variation thermique détectée";
+    status.innerHTML="Début de dégradation thermique";
   } else {
     label.innerHTML="UNSAFE";
-    status.innerHTML="Risque de dégradation";
+    status.innerHTML="Risque élevé de dégradation";
   }
 }
 </script></body>
